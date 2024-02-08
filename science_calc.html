@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CSS/calculator.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+</head>
+<body>
+    <section>
+    <div class="container">
+        <div class="header">
+            <h1>Scientific Calculator</h1>
+        </div>
+        <div class="input_display">
+            <input id = "dis" type ="text" placeholder="">
+        </div>
+        <div class="extra_functions">
+            <div class="functions"><button></button></div>
+            <div class="functions"><button>(</button></div>
+            <div class="functions"><button>)</button></div>
+            <div class="functions"><button>%</button></div>
+            <div class="functions"><button>1/x</button></div>
+            <div class="functions"><button>x<sup>2</sup></button></div>
+            <div class="functions"><button>x<sup>3</sup></button></div>
+            <div class="functions"><button>y<sup>x</sup></sup></button></div>
+            <div class="functions"><button>x!</button></div>
+            <div class="functions"><button>&#8730;</button></div>
+            <div class="functions"><button><sup>x</sup>&#8730;y</button></div>
+            <div class="functions"><button>log</button></div>
+            <div class="functions"><button>sin</button></div>
+            <div class="functions"><button>cos</button></div>
+            <div class="functions"><button>tan</button></div>
+            <div class="functions"><button>ln</button></div>
+            <div class="functions"><button>sinh</button></div>
+            <div class="functions"><button>cosh</button></div>
+            <div class="functions"><button>tanh</button></div>
+            <div class="functions"><button>e<sup>x</sup></button></div>
+            <div class="functions"><button>&#960;</button></div>
+        </div>
+        <div class="lower">
+            <div class="numbers">
+                <div class="functions"><button>7</button></div>
+                <div class="functions"><button>8</button></div>
+                <div class="functions"><button>9</button></div>
+                <div class="functions"><button>4</button></div>
+                <div class="functions"><button>5</button></div>
+                <div class="functions"><button>6</button></div>
+                <div class="functions"><button>1</button></div>
+                <div class="functions"><button>2</button></div>
+                <div class="functions"><button>3</button></div>
+                <div class="functions"><button>0</button></div>
+                <div class="functions"><button>.</button></div>
+                <div class="functions"><button>+/-</button></div>
+            </div>
+            <div class="operations">
+                <div class="functions" id="span-2"><button>C</button></div>
+                <div class="functions"><button>*</button></div>
+                <div class="functions"><button>/</button></div>
+                <div class="functions"><button>+</button></div>
+                <div class="functions"><button>-</button></div>
+                <div class="functions" id="span-2"><button>=</button></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        let string="";
+let functions=document.querySelectorAll('.functions');
+Array.from(functions).forEach((functions)=>{
+    button.addEventListener('click',(e)=>{
+        if(e.target.innerHTML=='='){
+            string=eval(string);
+            document.querySelector('input').value=string;
+        }
+        else{
+        console.log(e.target)
+        string=string+e.target.innerHTML;
+        document.querySelector('input').value=string;
+        }
+    })
+})
+
+        </script>
+</body>
+</html>
